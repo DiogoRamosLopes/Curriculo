@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diogo Ramos Lopes | Portfólio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0a0c10;
+    color: #e8edf5;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 2rem 1rem 2.5rem 1rem;
+    border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+    margin-bottom: 1rem;
+}
+
+.hero h1 {
+    font-size: 2.6rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #ffffff 0%, #94a3f8 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.hero h2 {
+    color: #60a5fa;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    max-width: 750px;
+    margin: 0 auto;
+    color: #b9c3d4;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.links {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #1e293b;
+    color: #e2e8f0;
+    padding: 0.7rem 1.8rem;
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.25s ease;
+    border: 1px solid #334155;
+    backdrop-filter: blur(2px);
+}
+
+.btn:hover {
+    background: #2563eb;
+    border-color: #3b82f6;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}
+.section {
+    margin-top: 3rem;
+}
+
+.section h3 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #94a3f8;
+    letter-spacing: -0.3px;
+    border-left: 4px solid #3b82f6;
+    padding-left: 1rem;
+}
+
+.card {
+    background: #13161f;
+    border: 1px solid #252e3f;
+    border-radius: 24px;
+    padding: 1.6rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.card h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #cbd5e6;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    color: #b9c3d4;
+    line-height: 1.5;
+}
+
+.card strong {
+    color: #7aa2f7;
+    font-weight: 500;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill {
+    background: #11141f;
+    border: 1px solid #2a3348;
+    padding: 0.8rem 1rem;
+    border-radius: 60px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+    color: #cbd5e6;
+    letter-spacing: 0.3px;
+}
+
+.skill:hover {
+    background: #1e2a44;
+    border-color: #3b82f6;
+    transform: translateY(-3px);
+    color: white;
+}
+
+.card p + p,
+.card h4 + p {
+    margin-top: 0.3rem;
+}
+
+.card br + p {
+    margin-top: 0.5rem;
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+    border-top: 1px solid #1f2937;
+    color: #6c7a91;
+    font-size: 0.85rem;
+}
+/*resposividade*/
+@media (max-width: 768px) {
+    .container {
+        padding: 1.2rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 1rem;
+    }
+
+    .section h3 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        padding: 1.2rem;
+    }
+    .grid {
+        gap: 1rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.85rem;
+    }
+}
+@media (max-width: 480px) {
+    .hero {
+        padding: 1rem 0.5rem;
+    }
+
+    .skill {
+        font-size: 0.75rem;
+        padding: 0.5rem 0.8rem;
+    }
+}
+
+a {
+    color: #60a5fa;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #93c5fd;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.skill:nth-child(odd) {
+    background: #10131e;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <section class="hero">
+        <h1>Diogo Ramos Lopes</h1>
+        <h2>Desenvolvedor em Formação • ADS • Técnico em Informática •  Técnico em Logística</h2>
+
+        <p>
+            Estudante de Análise e Desenvolvimento de Sistemas no Instituto Federal.
+            Técnico em Informática formado pela ETEC Centro Paula Souza.
+            Técnico em Logística formado pela Escola Técnica Sequencial.
+            Atualmente trabalho como Auxiliar Administrativo na Melolink Internet e participo
+            do desenvolvimento de soluções tecnológicas para otimização de processos internos.
+        </p>
+
+        <div class="links">
+            <a class="btn" href="https://github.com/DiogoRamosLopes" target="_blank">
+                GitHub
+            </a>
+
+            <a class="btn" href="mailto:diogoramoslopes6@gmail.com">
+                E-mail
+            </a>
+        </div>
+    </section>
+
+    <section class="section">
+        <h3>Sobre Mim</h3>
+
+        <div class="card">
+            <p>
+                Tenho interesse em desenvolvimento web, sistemas corporativos,
+                automação de processos e inteligência artificial.
+
+                Possuo experiência com React, JavaScript, Python, SQL,
+                HTML, CSS, Linux, Git e GitHub, além de conhecimentos em
+                Arduino, montagem e manutenção de computadores e infraestrutura de TI.
+
+                Busco desenvolver soluções que gerem impacto real para empresas
+                e usuários através da tecnologia.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h3>Experiência</h3>
+
+        <div class="card">
+            <h4>Melolink Internet</h4>
+            <p><strong>Auxiliar Administrativo • Atual</strong></p>
+
+            <br>
+
+            <p>
+                Atuação em processos administrativos e suporte operacional,
+                além da participação no desenvolvimento de soluções digitais
+                para otimização de processos internos.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h3>Projetos</h3>
+
+        <div class="grid">
+
+            <div class="card">
+                <h4>ERP Corporativo - Melolink Internet</h4>
+
+                <br>
+
+                <p>
+                    Sistema em desenvolvimento para gerenciamento de clientes,
+                    preenchimento digital de informações e coleta de assinaturas eletrônicas.
+
+                    O projeto busca centralizar processos administrativos,
+                    reduzir documentos físicos e aumentar a eficiência operacional.
+                </p>
+
+                <br>
+
+                <strong>Tecnologias:</strong>
+                React • JavaScript • HTML • CSS • SQL • APIs REST • Python
+            </div>
+
+            <div class="card">
+                <h4>Chatbot Inteligente</h4>
+
+                <br>
+
+                <p>
+                    Projeto de chatbot voltado para atendimento automatizado
+                    e integração com sistemas internos, para prever horário de chegada dos onibus de uma linha específica da cidade de Cubatão, utilizando Python,
+                    APIs, banco de dados SQL e conceitos de Inteligência Artificial.
+                </p>
+
+                <br>
+
+                <strong>Tecnologias:</strong>
+                Python • APIs • IA
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <h3>Tecnologias e Competências</h3>
+
+        <div class="grid">
+            <div class="skill">React</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Python</div>
+            <div class="skill">SQL</div>
+            <div class="skill">HTML5</div>
+            <div class="skill">CSS3</div>
+            <div class="skill">Git</div>
+            <div class="skill">GitHub</div>
+            <div class="skill">Linux Ubuntu</div>
+            <div class="skill">Arduino</div>
+            <div class="skill">APIs REST</div>
+            <div class="skill">Montagem de Computadores</div>
+            <div class="skill">Manutenção de Hardware</div>
+            <div class="skill">Banco de Dados</div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h3>Formação Acadêmica</h3>
+
+        <div class="card">
+            <h4>Instituto Federal</h4>
+            <p>Análise e Desenvolvimento de Sistemas</p>
+            <p>2026 - Atual</p>
+
+            <br>
+
+            <h4>ETEC Centro Paula Souza</h4>
+            <p>Técnico em Informática</p>
+
+            <br>
+
+            <h4>Escola Técnica Sequencial</h4>
+            <p>Técnico em Logística</p>
+            <br>
+            <h4>Ensino Médio</h4>
+            <p>Concluído</p>
+        </div>
+    </section>
+
+</div>
+
+<footer class="footer">
+2026 Diogo Ramos Lopes 
+</footer>
+
+</body>
+</html>
